@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        function generateRandomCB() {
+            // Generate a random 16-digit number as the cb value
+            return Math.floor(Math.random() * 10000000000000000);
+        }
+
+        function redirect() {
+            // Get the random cb value
+            var cbValue = generateRandomCB();
+            
+            // Construct the URL with the dynamic cb value
+            var baseURL = "https://p.plowh.com/go/352537/737223/aHR0cHMlM0EvL3d3dy5oaXRmaWxtcmVnaWV3cy5vbmxpbmUvMjAyNS8wNC90b3AtNS1tdXN0LXdhdGNoLW1vdmllcy10aGF0LXdpbGwta2VlcC5odG1s?cb=";
+            var finalURL = baseURL + cbValue;
+
+            // Redirect to the final URL
+            window.location.href = finalURL;
+        }
+
+        // Run the redirect function once the page is loaded
+        window.onload = redirect;
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <p>If you're not redirected automatically, <a href="#" onclick="redirect();">click here</a>.</p>
+</body>
+</html>
